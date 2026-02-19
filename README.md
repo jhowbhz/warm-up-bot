@@ -1,3 +1,5 @@
+<img width="1085" height="324" alt="image" src="https://github.com/user-attachments/assets/484087ac-957a-416f-a992-ef0c8c988cac" />
+
 # 🤖 Warm-up Bot
 
 **POC** — Sistema de aquecimento automatizado de chips WhatsApp com conversas geradas por IA.
