@@ -169,7 +169,7 @@ As conversas são geradas com as seguintes características:
 ## 🎥 Demonstração
 
 <p align="center">
-  <img src="./demo.webp" width="100%" />
+  <img src="./demo.gif" width="100%" />
 </p>
 
 ## Screenshot API
