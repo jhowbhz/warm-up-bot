@@ -47,7 +47,6 @@ warm-up-bot/
 │       ├── services/       # apibrasil, chatgpt, warming, tunnel, webhook...
 │       ├── middleware/     # Autenticação JWT
 │       └── utils/          # Criptografia AES-256
-├── electron/               # Wrapper desktop (opcional)
 ├── QUICKSTART.md           # Guia de início rápido
 └── SECURITY.md             # Documentação de segurança
 ```
@@ -174,7 +173,8 @@ As conversas são geradas com as seguintes características:
   <img src="./demo.gif" width="100%" />
 </p>
 
-Consulte [SECURITY.md](SECURITY.md) para detalhes completos sobre criptografia e boas práticas.
+## Screenshot API
+
 
 ## Licença
 
