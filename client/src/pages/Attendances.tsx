@@ -307,9 +307,8 @@ export default function Attendances() {
             ) : (
               <div className="space-y-3">
                 {attendances.map((attendance) => {
-                  let contextData = null;
                   try {
-                    contextData = attendance.context ? JSON.parse(attendance.context) : null;
+                    if (attendance.context) JSON.parse(attendance.context);
                   } catch {}
 
                   const isSelected = selectedChat?.id === attendance.id;

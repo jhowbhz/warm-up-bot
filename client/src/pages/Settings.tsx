@@ -23,9 +23,10 @@ import {
   Users,
   Plus,
   Edit2,
+  Shield,
 } from 'lucide-react';
 
-type TabId = 'apibrasil' | 'ia' | 'cloudflare' | 'atendentes' | 'mensagens';
+type TabId = 'apibrasil' | 'ia' | 'cloudflare' | 'atendentes' | 'mensagens' | 'seguranca';
 
 const TABS: { id: TabId; label: string; icon: typeof Database; color: string }[] = [
   { id: 'apibrasil', label: 'APIBrasil', icon: Database, color: 'green' },

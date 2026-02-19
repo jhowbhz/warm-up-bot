@@ -12,7 +12,6 @@ import {
   Settings as SettingsIcon,
   Flame,
   ChevronRight,
-  Signal,
   Globe,
   LogOut,
   User,
