@@ -1,3 +1,5 @@
+<img width="1085" height="324" alt="image" src="https://github.com/user-attachments/assets/484087ac-957a-416f-a992-ef0c8c988cac" />
+
 # 🤖 Warm-up Bot
 
 **POC** — Sistema de aquecimento automatizado de chips WhatsApp com conversas geradas por IA.
@@ -54,7 +56,7 @@ warm-up-bot/
 
 - **Node.js** 18+
 - **MySQL** 8.0+
-- Conta na **[APIBrasil](https://apibrasil.com.br)** com SecretKey
+- Conta na **[APIBrasil](https://apibrasil.com.br)** com Wpp ou Baileys
 - **API Key** da [OpenAI](https://platform.openai.com/api-keys)
 
 ## Instalação
@@ -169,7 +171,7 @@ As conversas são geradas com as seguintes características:
 ## 🎥 Demonstração
 
 <p align="center">
-  <img src="./demo.webp" width="100%" />
+  <img src="./demo.gif" width="100%" />
 </p>
 
 ## Screenshot API
