@@ -9,7 +9,9 @@
     "start": "node dist/index.js",
     "migrate": "ts-node src/migrate.ts up",
     "migrate:down": "ts-node src/migrate.ts down",
-    "migrate:status": "ts-node src/migrate.ts status"
+    "migrate:status": "ts-node src/migrate.ts status",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "apigratis-sdk-nodejs": "^0.1.6",
@@ -34,6 +36,7 @@
     "@types/swagger-ui-express": "^4.1.8",
     "nodemon": "^3.0.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^3.2.4"
   }
 }

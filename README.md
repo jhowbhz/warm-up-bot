@@ -2,6 +2,17 @@
 
 # 🤖 Warm-up Bot
 
+[![CI](https://github.com/jhowbhz/warm-up-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/jhowbhz/warm-up-bot/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-ChatGPT-412991?logo=openai&logoColor=white)](https://openai.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![GitHub stars](https://img.shields.io/github/stars/jhowbhz/warm-up-bot?style=social)](https://github.com/jhowbhz/warm-up-bot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jhowbhz/warm-up-bot?style=social)](https://github.com/jhowbhz/warm-up-bot/network/members)
+
 **POC** — Sistema de aquecimento automatizado de chips WhatsApp com conversas geradas por IA.
 
 O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando conversas progressivas ao longo de 8 dias, aumentando gradualmente o volume para reduzir risco de banimento. As conversas são geradas pelo ChatGPT com linguagem natural em português brasileiro.

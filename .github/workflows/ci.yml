@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, stable]
+  pull_request:
+    branches: [main, master, stable]
+
+jobs:
+  client:
+    name: Frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Verificar TypeScript
+        run: npx tsc --noEmit
+        working-directory: client
+
+      - name: Rodar testes
+        run: npm test
+        working-directory: client
+
+      - name: Build de produção
+        run: npm run build
+        working-directory: client
+
+  server:
+    name: Backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Verificar TypeScript
+        run: npx tsc --noEmit
+        working-directory: server
+
+      - name: Rodar testes
+        run: npm test
+        working-directory: server
+
+      - name: Build de produção
+        run: npm run build
+        working-directory: server
