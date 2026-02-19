@@ -1,4 +1,4 @@
-# Warm-up Bot
+# 🤖 Warm-up Bot
 
 **POC** — Sistema de aquecimento automatizado de chips WhatsApp com conversas geradas por IA.
 
@@ -24,8 +24,8 @@ O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando c
 | Backend   | Node.js, Express, TypeScript, Sequelize ORM                  |
 | Banco     | MySQL (utf8mb4)                                              |
 | IA        | OpenAI SDK (ChatGPT)                                         |
-| WhatsApp  | APIBrasil (WPP / Evolution)                                  |
-| Infra     | Cloudflare Tunnel, JWT, Helmet.js, node-cron                 |
+| WhatsApp  | APIBrasil (WPP / Baileys)                                    |
+| Infra     | Cloudflare Tunnel, APIBrasil, Helmet.js, node-cron           |
 
 ## Estrutura do Projeto
 
@@ -169,7 +169,7 @@ As conversas são geradas com as seguintes características:
 ## 🎥 Demonstração
 
 <p align="center">
-  <img src="./demo.gif" width="100%" />
+  <img src="./demo.webp" width="100%" />
 </p>
 
 ## Screenshot API
