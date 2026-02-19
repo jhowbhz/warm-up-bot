@@ -14,8 +14,7 @@ O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando c
 - **Dashboard com métricas em tempo real** — acompanhamento via Server-Sent Events (SSE) e gráficos
 - **Sistema de atendimento** — bots automatizados com handoff para atendentes humanos
 - **Túnel Cloudflare** — exposição automática de webhooks sem port forwarding
-- **Credenciais criptografadas** — AES-256-CBC para dados sensíveis no banco de dados
-- **Suporte multi-servidor** — WPP e Baileys (Evolution API) com roteamento automático
+- **Suporte multi-servidor** — WPP e Baileys via APIBrasil com roteamento automático
 
 ## Tech Stack
 
@@ -175,6 +174,7 @@ As conversas são geradas com as seguintes características:
 
 ## Screenshot API
 
+<img width="1241" height="762" alt="image" src="https://github.com/user-attachments/assets/1691e5f0-7079-41ab-bbe5-adeb4f0f1271" />
 
 ## Licença
 
