@@ -23,6 +23,7 @@ import { tunnelService } from './services/tunnel.service';
 import { webhookLogger } from './services/webhook-logger.service';
 import { Instance } from './models';
 import apiBrasilService from './services/apibrasil.service';
+import { setupSwagger } from './config/swagger';
 
 const app = express();
 
@@ -73,6 +74,9 @@ async function updateAllWebhooks(tunnelUrl: string) {
     console.error('[Tunnel] Erro ao atualizar webhooks:', err.message);
   }
 }
+
+// Swagger API Docs
+setupSwagger(app);
 
 // Health check
 app.get('/health', (req, res) => {
