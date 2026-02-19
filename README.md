@@ -168,13 +168,11 @@ As conversas são geradas com as seguintes características:
 - **Mix de tipos** — 70% texto, 15% áudio, 10% imagem, 5% sticker
 - **Respostas contextuais** — responde com base nas mensagens recebidas
 
-## Segurança
+## 🎥 Demonstração
 
-- Credenciais protegidas com **AES-256-CBC** (chave no `.env`)
-- Autenticação via **JWT**
-- Headers de segurança com **Helmet.js**
-- CORS configurado por domínio
-- Arquivo `.env` excluído do Git
+<p align="center">
+  <img src="./demo.gif" width="100%" />
+</p>
 
 Consulte [SECURITY.md](SECURITY.md) para detalhes completos sobre criptografia e boas práticas.
 
