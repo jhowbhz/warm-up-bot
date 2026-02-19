@@ -54,7 +54,7 @@ warm-up-bot/
 
 - **Node.js** 18+
 - **MySQL** 8.0+
-- Conta na **[APIBrasil](https://apibrasil.com.br)** com SecretKey
+- Conta na **[APIBrasil](https://apibrasil.com.br)** com Wpp ou Baileys
 - **API Key** da [OpenAI](https://platform.openai.com/api-keys)
 
 ## Instalação
