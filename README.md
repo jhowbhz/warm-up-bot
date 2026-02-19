@@ -10,8 +10,6 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-ChatGPT-412991?logo=openai&logoColor=white)](https://openai.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
-[![GitHub stars](https://img.shields.io/github/stars/jhowbhz/warm-up-bot?style=social)](https://github.com/jhowbhz/warm-up-bot/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/jhowbhz/warm-up-bot?style=social)](https://github.com/jhowbhz/warm-up-bot/network/members)
 
 **POC** — Sistema de aquecimento automatizado de chips WhatsApp com conversas geradas por IA.
 
