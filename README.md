@@ -18,6 +18,16 @@ O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando c
 - **Túnel Cloudflare** — exposição automática de webhooks sem port forwarding
 - **Suporte multi-servidor** — WPP e Baileys via APIBrasil com roteamento automático
 
+## Docker start
+
+```docker compose -f docker-compose.dev.yml up -d```
+
+```docker compose -f docker-compose.dev.yml logs -f```
+
+```docker compose -f docker-compose.dev.yml down```
+
+```docker compose -f docker-compose.dev.yml up -d --build```
+
 ## Tech Stack
 
 | Camada    | Tecnologias                                                  |
@@ -29,29 +39,6 @@ O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando c
 | WhatsApp  | APIBrasil (WPP / Baileys)                                    |
 | Infra     | Cloudflare Tunnel, APIBrasil, Helmet.js, node-cron           |
 
-## Estrutura do Projeto
-
-```
-warm-up-bot/
-├── client/                 # Frontend React
-│   └── src/
-│       ├── components/     # Sidebar, InstanceCard, QrCodeModal, PhaseProgress
-│       ├── pages/          # Dashboard, Instances, Contacts, Bots, Settings...
-│       ├── contexts/       # AuthContext
-│       └── hooks/          # useApi, useStatusStream
-├── server/                 # Backend Express
-│   └── src/
-│       ├── config/         # Database (Sequelize) e variáveis de ambiente
-│       ├── models/         # Instance, WarmingContact, Conversation, Message...
-│       ├── migrations/     # Schema e runner de migrações
-│       ├── routes/         # auth, instances, contacts, webhooks, metrics, sse...
-│       ├── services/       # apibrasil, chatgpt, warming, tunnel, webhook...
-│       ├── middleware/     # Autenticação JWT
-│       └── utils/          # Criptografia AES-256
-├── QUICKSTART.md           # Guia de início rápido
-└── SECURITY.md             # Documentação de segurança
-```
-
 ## Pré-requisitos
 
 - **Node.js** 18+
@@ -59,7 +46,7 @@ warm-up-bot/
 - Conta na **[APIBrasil](https://apibrasil.com.br)** com Wpp ou Baileys
 - **API Key** da [OpenAI](https://platform.openai.com/api-keys)
 
-## Instalação
+## Instalação manual
 
 ### 1. Instalar dependências
 
@@ -125,16 +112,6 @@ npm run dev
 2. Informe email/senha da APIBrasil e a SecretKey
 3. Cole sua API Key da OpenAI e escolha o modelo (recomendado: `gpt-4o-mini`)
 4. Salve — as credenciais ficam criptografadas no banco
-
-## Docker start
-
-```docker compose -f docker-compose.dev.yml up -d```
-
-```docker compose -f docker-compose.dev.yml logs -f```
-
-```docker compose -f docker-compose.dev.yml down```
-
-```docker compose -f docker-compose.dev.yml up -d --build```
 
 ## Cronograma de Aquecimento
 
