@@ -18,15 +18,23 @@ O Warm-up Bot automatiza o processo de aquecimento de contas WhatsApp enviando c
 - **Túnel Cloudflare** — exposição automática de webhooks sem port forwarding
 - **Suporte multi-servidor** — WPP e Baileys via APIBrasil com roteamento automático
 
-## Docker start
+## Docker start dev
 
-```docker compose -f docker-compose.dev.yml up -d```
+```
+docker compose -f docker-compose.dev.yml up -d
+```
 
-```docker compose -f docker-compose.dev.yml logs -f```
+```
+docker compose -f docker-compose.dev.yml logs -f
+```
 
-```docker compose -f docker-compose.dev.yml down```
+```
+docker compose -f docker-compose.dev.yml down
+```
 
-```docker compose -f docker-compose.dev.yml up -d --build```
+```
+docker compose -f docker-compose.dev.yml up -d --build
+```
 
 ## Tech Stack
 
@@ -80,12 +88,6 @@ DB_PASS=sua_senha
 PORT=3001
 NODE_ENV=development
 WEBHOOK_URL=http://localhost:3001/api/webhooks
-```
-
-Para gerar uma chave de criptografia segura (PowerShell):
-
-```powershell
--join ((48..57) + (65..90) + (97..122) | Get-Random -Count 32 | % {[char]$_})
 ```
 
 ### 4. Executar migrações
