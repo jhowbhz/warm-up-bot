@@ -126,23 +126,15 @@ npm run dev
 3. Cole sua API Key da OpenAI e escolha o modelo (recomendado: `gpt-4o-mini`)
 4. Salve — as credenciais ficam criptografadas no banco
 
-## Scripts Disponíveis
+## Docker start
 
-| Comando                | Descrição                              |
-|------------------------|----------------------------------------|
-| `npm run dev`          | Inicia server + client (dev)           |
-| `npm run dev:server`   | Inicia apenas o backend                |
-| `npm run dev:client`   | Inicia apenas o frontend               |
-| `npm run build`        | Build de produção (client + server)    |
-| `npm start`            | Inicia em modo produção                |
+```docker compose -f docker-compose.dev.yml up -d```
 
-Migrações (executar dentro de `server/`):
+```docker compose -f docker-compose.dev.yml logs -f```
 
-| Comando                | Descrição                              |
-|------------------------|----------------------------------------|
-| `npm run migrate`      | Executar migrações pendentes           |
-| `npm run migrate:down` | Reverter última migração               |
-| `npm run migrate:status` | Verificar status das migrações       |
+```docker compose -f docker-compose.dev.yml down```
+
+```docker compose -f docker-compose.dev.yml up -d --build```
 
 ## Cronograma de Aquecimento
 

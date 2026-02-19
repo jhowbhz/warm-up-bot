@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .env
+docker.env
 *.log
 .DS_Store
 .vscode/

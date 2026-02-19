@@ -4,7 +4,7 @@
   "description": "Backend - Express + Sequelize + APIBrasil + ChatGPT",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node --transpile-only src/index.ts\"",
     "build": "tsc",
     "start": "node dist/index.js",
     "migrate": "ts-node src/migrate.ts up",

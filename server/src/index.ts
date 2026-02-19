@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import path from 'path';
 import { config } from './config/env';
 import { connectDatabase } from './config/database';
 
@@ -194,6 +195,15 @@ app.use('/api/bots', authMiddleware, botsRouter);
 app.use('/api/attendances', authMiddleware, attendancesRouter);
 app.use('/api/attendants', authMiddleware, attendantsRouter);
 app.use('/api/sse', sseRouter);
+
+// Servir frontend em produção (arquivos estáticos buildados)
+if (config.server.nodeEnv === 'production') {
+  const publicPath = path.join(__dirname, '..', 'public');
+  app.use(express.static(publicPath));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+  });
+}
 
 // Iniciar servidor 
 async function start() {
