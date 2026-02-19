@@ -1,0 +1,28 @@
+{
+  "name": "estudo-esquenta-chips",
+  "version": "1.0.0",
+  "description": "POC - Software de Aquecimento de Chips WhatsApp",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client && npm run build --workspace=server",
+    "start": "npm run start --workspace=server"
+  },
+  "keywords": [
+    "whatsapp",
+    "warming",
+    "api-brasil",
+    "chatgpt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

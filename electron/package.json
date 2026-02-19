@@ -1,0 +1,35 @@
+{
+  "name": "esquenta-chip-electron",
+  "version": "1.0.0",
+  "description": "Electron wrapper para Warm-up Bot",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron .",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "com.esquentachip.app",
+    "productName": "Warm-up Bot",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "../server/dist/**/*",
+      "../client/dist/**/*"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "assets/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron": "^28.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3",
+    "electron-builder": "^24.9.1"
+  }
+}
