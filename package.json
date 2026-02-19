@@ -23,6 +23,9 @@
     "api-brasil",
     "chatgpt"
   ],
+  "engines": {
+    "node": ">=23.0.0"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {

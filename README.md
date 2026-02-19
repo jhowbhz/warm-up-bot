@@ -3,6 +3,7 @@
 # 🤖 Warm-up Bot
 
 [![CI](https://github.com/jhowbhz/warm-up-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/jhowbhz/warm-up-bot/actions/workflows/ci.yml)
+[![Node.js](https://img.shields.io/badge/Node.js-23-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -58,7 +59,7 @@ docker compose -f docker-compose.dev.yml up -d --build
 
 ## Pré-requisitos
 
-- **Node.js** 18+
+- **Node.js** 23+
 - **MySQL** 8.0+
 - Conta na **[APIBrasil](https://apibrasil.com.br)** com Wpp ou Baileys
 - **API Key** da [OpenAI](https://platform.openai.com/api-keys)

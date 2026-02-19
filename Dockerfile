@@ -1,5 +1,5 @@
 # ── Stage 1: Build client ──
-FROM node:18-alpine AS client-build
+FROM node:23-alpine AS client-build
 WORKDIR /app/client
 COPY client/package.json ./
 RUN npm install
@@ -7,7 +7,7 @@ COPY client/ ./
 RUN npm run build
 
 # ── Stage 2: Build server ──
-FROM node:18-alpine AS server-build
+FROM node:23-alpine AS server-build
 WORKDIR /app/server
 COPY server/package.json ./
 RUN npm install
@@ -15,7 +15,7 @@ COPY server/ ./
 RUN npx tsc
 
 # ── Stage 3: Production ──
-FROM node:18-alpine
+FROM node:23-alpine
 WORKDIR /app
 
 RUN apk add --no-cache curl
