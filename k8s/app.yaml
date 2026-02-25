@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: warm-up-bot
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: warm-up-bot
+  template:
+    metadata:
+      labels:
+        app: warm-up-bot
+    spec:
+      initContainers:
+        - name: wait-for-mysql
+          image: busybox:1.36.1
+          command:
+            - sh
+            - -c
+            - until nc -z mysql 3306; do echo "Aguardando MySQL..."; sleep 2; done
+      containers:
+        - name: warm-up-bot
+          image: ghcr.io/jhowbhz/warm-up-bot:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3001
+          envFrom:
+            - configMapRef:
+                name: warm-up-bot-config
+            - secretRef:
+                name: warm-up-bot-secrets
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 6
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 6
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 1
+              memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: warm-up-bot
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  selector:
+    app: warm-up-bot
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3001
+  type: ClusterIP

@@ -158,6 +158,24 @@ As conversas são geradas com as seguintes características:
 
 <img width="1241" height="762" alt="image" src="https://github.com/user-attachments/assets/1691e5f0-7079-41ab-bbe5-adeb4f0f1271" />
 
+## Deploy com Argo CD
+
+O projeto já está preparado para GitOps com Kubernetes em:
+
+- `k8s/` (manifestos da aplicação + MySQL, com Kustomize)
+- `argocd/warm-up-bot-application.yaml` (Application do Argo CD)
+
+Passos rápidos:
+
+1. Atualize a imagem do app em `k8s/app.yaml`
+2. Troque os placeholders de segredo em `k8s/secret.yaml`
+3. Ajuste `repoURL`/`targetRevision` em `argocd/warm-up-bot-application.yaml` se necessário
+4. Aplique o Application no cluster:
+
+```bash
+kubectl apply -f argocd/warm-up-bot-application.yaml
+```
+
 ## Licença
 
 MIT
