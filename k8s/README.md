@@ -17,7 +17,17 @@ Este diretório contém os manifestos Kubernetes do `warm-up-bot` usando Kustomi
    - `ENCRYPTION_KEY`
    - `DB_PASS`
    - `JWT_SECRET`
-3. Se necessário, ajuste recursos, storage class e réplicas conforme seu cluster.
+3. Crie o secret para pull da imagem privada no GHCR:
+
+```bash
+kubectl -n warm-up-bot create secret docker-registry ghcr-creds \
+  --docker-server=ghcr.io \
+  --docker-username=SEU_USUARIO_GITHUB \
+  --docker-password=SEU_PAT_COM_read:packages \
+  --docker-email=seu-email@exemplo.com
+```
+
+4. Se necessário, ajuste recursos, storage class e réplicas conforme seu cluster.
 
 ## Teste local dos manifestos
 
