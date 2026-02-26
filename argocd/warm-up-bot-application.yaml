@@ -8,7 +8,11 @@ spec:
   source:
     repoURL: https://github.com/jhowbhz/warm-up-bot.git
     targetRevision: stable
-    path: k8s
+    path: k8s/helm # Agora aponta para a pasta do Helm Chart
+    helm:
+      parameters:
+        - name: ingress.host
+          value: meu-dominio.com # Você vai poder editar isso direto na UI do ArgoCD!
   destination:
     server: https://kubernetes.default.svc
     namespace: warm-up-bot

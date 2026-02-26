@@ -1,0 +1,7 @@
+ingress:
+  enabled: true
+  host: meu-dominio.com # Este é o valor que o ArgoCD vai te deixar editar na interface!
+  className: nginx
+  tls:
+    enabled: true
+    clusterIssuer: letsencrypt-prod
