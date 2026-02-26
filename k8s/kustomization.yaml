@@ -7,3 +7,4 @@ resources:
   - secret.yaml
   - mysql.yaml
   - app.yaml
+  - ingress.yaml

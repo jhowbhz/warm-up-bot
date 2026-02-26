@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Aponta para a pasta base (o repositório público genérico)
+resources:
+  - ../../
+
+# Aqui você aplica as modificações específicas do seu ambiente
+patches:
+  - path: ingress-patch.yaml

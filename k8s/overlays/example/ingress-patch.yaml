@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: warm-up-bot-ingress
+spec:
+  tls:
+    - hosts:
+        - bot.seusite.com # Substitua pelo seu domínio
+      secretName: warm-up-bot-tls
+  rules:
+    - host: seu.site.com # Substitua pelo seu domínio
