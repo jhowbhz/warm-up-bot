@@ -66,10 +66,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
+  type: {{ .Values.service.type | default "ClusterIP" }}
   selector:
     app: warm-up-bot
   ports:
     - name: http
       port: 80
       targetPort: 3001
-  type: ClusterIP
+      {{- if eq (default "ClusterIP" .Values.service.type) "NodePort" }}
+      nodePort: {{ .Values.service.nodePort }}
+      {{- end }}

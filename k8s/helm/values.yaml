@@ -5,3 +5,7 @@ ingress:
   tls:
     enabled: true
     clusterIssuer: letsencrypt-prod
+
+service:
+  type: ClusterIP
+  nodePort: 30080
